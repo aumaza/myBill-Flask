@@ -26,6 +26,7 @@
                         <li class="nav-item"><a class="nav-link" href="#contact">Impuestos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Olvidé mi password</a></li>
                     </ul>
+                        <a href="{{ url_for('forms.formLogin')}}"><button class="btn btn-success navbar-btn" name="loginButton">Ingresar</button></a>
                 </div>
             </div>
         </nav>
@@ -34,21 +35,9 @@
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder">Bienvenido/a a My Bills</h1>
                 <p class="lead">Una aplicación para controlar y administrar sus gastos fijos y variables</p><hr>
-                
+                                
                
-               
-                <div class="form-group">
-                <form method="POST">
-                    <label for="email">Usuario:</label>
-                    <input type="text" class="form-control" placeholder="Ingrese usuario" id="user" name="user" style="text-align:center;">
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" placeholder="ingrese password" id="pwd" name="pass" style="text-align:center;">
-                </div><br>
-                
-                <button type="submit" class="btn btn-secondary" onclick="login();">Ingresar</button>
-                </form>
+              {%block content%}{%endblock%}
                 
                 
                 
